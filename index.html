@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Landing Page</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      #header-img {
+        width: 150px;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      @media (max-height: 800px) {
+        img {
+          width: 100px;
+        }
+      }
+
+      header.navi {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        font-size: 20px;
+      }
+
+      .logo-container,
+      .nav-links {
+        display: flex;
+      }
+
+      .logo-container {
+        flex: 1;
+      }
+
+      nav {
+        flex: 1;
+      }
+
+      .nav-links {
+        justify-content: space-around;
+        list-style: none;
+      }
+
+      .nav-link {
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+      }
+
+      .nav-link:hover {
+        color: rgb(206, 24, 24);
+      }
+      span {
+        font-weight: bolder;
+        font-size: 28px;
+        color: rgb(206, 24, 24);
+      }
+
+      .presentation {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        margin-top: 5%;
+      }
+      .introduction {
+        flex: 2;
+      }
+      .cover {
+        float: 1;
+      }
+      .intro-text {
+        margin-top: 5px;
+        margin-right: 15px;
+      }
+      .newsletter {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        margin-top: 2%;
+        margin-bottom: 1%;
+        background-color: rgb(206, 24, 24);
+        color: whitesmoke;
+      }
+      div.newsletter {
+        display: block;
+        text-align: center;
+      }
+      form {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+      }
+      .newsletter h2 {
+        text-align: center;
+      }
+
+      .aboutit {
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        margin-top: 10%;
+      }
+
+      .aboutit h2 {
+        color: white;
+        background-color: rgb(206, 24, 24);
+        font-weight: bold;
+        padding: 10px;
+      }
+      .aboutit p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      @media screen and (max-width: 1020px) {
+        .presentation {
+          flex-direction: column;
+        }
+        .introduction {
+          margin-top: 5vh;
+          margin-bottom: 5vh;
+          text-align: center;
+        }
+        .intro-text h1 span {
+          font-size: 30px;
+        }
+        .intro-text p {
+          font-size: 18px;
+        }
+        iframe {
+          width: 100%;
+          height: auto;
+          margin: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <header class="navi" id="header">
+      <div class="logo-container">
+        <img
+          id="header-img"
+          src="https://cdn.shopify.com/s/files/1/0263/5143/5836/files/TMC_Socialshare_c2884e72-0112-47e5-8af8-fba78e11bfff.png?v=1587406160"
+          alt="logo"
+        />
+      </div>
+      <nav id="nav-bar">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#TMC">TMC</a></li>
+          <li><a class="nav-link" href="#about">History</a></li>
+          <li><a class="nav-link" href="#sign">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="TMC" class="presentation">
+        <div class="introduction">
+          <div class="intro-text">
+            <h1>THE <span>MARATHON</span> CONTINUES</h1>
+            <p>
+              <em
+                >"Luck is just bein' prepared at all times, so when the door
+                opens you're ready."
+              </em>
+              <b> -Nipsey Hussle</b>
+            </p>
+          </div>
+        </div>
+        <div class="cover">
+          <iframe
+            id="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/FHZ0sEW5zRE?autoplay=1"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </section>
+      <section id="about" class="aboutit">
+        <h2>History</h2>
+        <p>
+          Hussle opened the Marathon Clothing store on June 17, 2017, which he
+          founded along with partners Carless, Civil, and his brother Samiel
+          Asghedom. Opening the store at this intersection in the Crenshaw
+          commercial district was important to him because he wanted to invest
+          and provide opportunities in his neighborhood of Hyde Park. The store
+          is billed as a "smart store," which bridges the gap between culture
+          and technology by giving customers access to exclusive music and other
+          content created by rappers through an app created by software engineer
+          Iddris Sandu. The year before his death, Hussle had bought the
+          L-shaped small shopping center where his store was located. His
+          partner was real estate investor David Gross, who is also a South Los
+          Angeles native.
+        </p>
+      </section>
+      <section id="sign">
+        <div class="newsletter">
+          <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <h2>Newsletter</h2>
+            <label for="email"
+              >Email:
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email id"
+                name="email"
+              />
+            </label>
+            <input id="submit" type="submit" value="Sign Up" />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
